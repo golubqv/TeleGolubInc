@@ -1,163 +1,560 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
+<meta
+name="viewport"
 content="width=device-width, initial-scale=1.0">
 
 <title>TeleGolub</title>
 
-<link rel="preconnect"
+<link
+rel="preconnect"
 href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
+<link
+rel="preconnect"
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <link
 rel="stylesheet"
 href="css/style.css">
 
+<script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
 <body>
 
-<div class="app">
+<div class="background">
 
-    <!-- SIDEBAR -->
+<div class="blur blur1"></div>
 
-    <aside class="sidebar">
-
-        <div class="sidebar-top">
-
-            <div class="logo">
-
-                <div class="logo-icon">
-
-                    🕊️
-
-                </div>
-
-                <div>
-
-                    <h1>TeleGolub</h1>
-
-                    <p>Modern Messenger</p>
-
-                </div>
-
-            </div>
-
-            <div class="search">
-
-                <input
-                type="text"
-                placeholder="Поиск">
-
-            </div>
-
-        </div>
-
-        <div class="chat-list">
-
-            <!-- JS -->
-
-        </div>
-
-    </aside>
-
-    <!-- MAIN -->
-
-    <main class="main">
-
-        <header class="header">
-
-            <div class="chat-user">
-
-                <div class="avatar big">
-
-                    A
-
-                </div>
-
-                <div>
-
-                    <h2>Выберите чат</h2>
-
-                    <span>
-
-                        Добро пожаловать в TeleGolub
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="header-buttons">
-
-                <button>📞</button>
-
-                <button>🎥</button>
-
-                <button>⋮</button>
-
-            </div>
-
-        </header>
-
-        <section
-        class="messages">
-
-        </section>
-
-        <footer
-        class="composer">
-
-            <button class="icon-btn">
-    <i data-lucide="smile"></i>
-</button>
-
-<button class="icon-btn">
-    <i data-lucide="paperclip"></i>
-</button>
-
-<button class="icon-btn">
-    <i data-lucide="mic"></i>
-</button>
-
-<button class="send">
-    <i data-lucide="send"></i>
-</button>
-
-            <input
-            placeholder="Введите сообщение...">
-
-            <button>
-
-                🎤
-
-            </button>
-
-        </footer>
-
-    </main>
+<div class="blur blur2"></div>
 
 </div>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+<div class="app">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="sidebar-header">
+
+<div class="logo">
+
+<div class="logo-circle">
+
+🕊️
+
+</div>
+
+<div>
+
+<h1>TeleGolub</h1>
+
+<p>Modern Messenger</p>
+
+</div>
+
+</div>
+
+<button class="menu-btn">
+
+<i data-lucide="menu"></i>
+
+</button>
+
+</div>
+
+<div class="search">
+
+<i data-lucide="search"></i>
+
+<input
+
+type="text"
+
+placeholder="Поиск">
+
+</div>
+
+<div class="stories">
+
+<div class="story you">
+
+<div class="story-avatar">
+
+🕊️
+
+</div>
+
+<span>Вы</span>
+
+</div>
+
+<div class="story">
+
+<div class="story-avatar">
+
+😀
+
+</div>
+
+<span>Alex</span>
+
+</div>
+
+<div class="story">
+
+<div class="story-avatar">
+
+😎
+
+</div>
+
+<span>Max</span>
+
+</div>
+
+<div class="story">
+
+<div class="story-avatar">
+
+🐱
+
+</div>
+
+<span>Kate</span>
+
+</div>
+
+</div>
+
+<div class="chat-list">
+
+  <!-- CHAT 1 -->
+
+<div class="chat active">
+
+    <div class="avatar">
+
+        A
+
+        <div class="online"></div>
+
+    </div>
+
+    <div class="chat-content">
+
+        <div class="chat-top">
+
+            <h3>Alex</h3>
+
+            <span>12:45</span>
+
+        </div>
+
+        <div class="chat-bottom">
+
+            <p>Привет! Как дела?</p>
+
+            <div class="badge">
+
+                2
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHAT 2 -->
+
+<div class="chat">
+
+    <div class="avatar">
+
+        M
+
+        <div class="online"></div>
+
+    </div>
+
+    <div class="chat-content">
+
+        <div class="chat-top">
+
+            <h3>Max</h3>
+
+            <span>11:58</span>
+
+        </div>
+
+        <div class="chat-bottom">
+
+            <p>Отправил подарок 🎁</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHAT 3 -->
+
+<div class="chat">
+
+    <div class="avatar">
+
+        K
+
+    </div>
+
+    <div class="chat-content">
+
+        <div class="chat-top">
+
+            <h3>Kate</h3>
+
+            <span>Вчера</span>
+
+        </div>
+
+        <div class="chat-bottom">
+
+            <p>Спасибо ❤️</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHAT 4 -->
+
+<div class="chat">
+
+    <div class="avatar">
+
+        D
+
+        <div class="online"></div>
+
+    </div>
+
+    <div class="chat-content">
+
+        <div class="chat-top">
+
+            <h3>Denis</h3>
+
+            <span>Вчера</span>
+
+        </div>
+
+        <div class="chat-bottom">
+
+            <p>🎤 Голосовое сообщение</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHAT 5 -->
+
+<div class="chat">
+
+    <div class="avatar">
+
+        T
+
+    </div>
+
+    <div class="chat-content">
+
+        <div class="chat-top">
+
+            <h3>TeleGolub News</h3>
+
+            <span>Пн</span>
+
+        </div>
+
+        <div class="chat-bottom">
+
+            <p>Добро пожаловать в TeleGolub!</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- END SIDEBAR -->
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+<header class="header">
+
+<div class="header-user">
+
+<div class="avatar large">
+
+A
+
+<div class="online"></div>
+
+</div>
+
+<div>
+
+<h2>Alex</h2>
+
+<p>был(а) недавно</p>
+
+</div>
+
+</div>
+
+<div class="header-actions">
+
+<button>
+
+<i data-lucide="phone"></i>
+
+</button>
+
+<button>
+
+<i data-lucide="video"></i>
+
+</button>
+
+<button>
+
+<i data-lucide="search"></i>
+
+</button>
+
+<button>
+
+<i data-lucide="more-vertical"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<section class="messages">
+
+    <div class="date-divider">
+
+<span>
+
+Сегодня
+
+</span>
+
+</div>
+
+<div class="message">
+
+<div class="message-text">
+
+Привет 👋
+
+</div>
+
+<div class="message-time">
+
+12:30
+
+</div>
+
+</div>
+
+<div class="message me">
+
+<div class="message-text">
+
+Привет! Рад тебя видеть 😄
+
+</div>
+
+<div class="message-time">
+
+12:31 ✔✔
+
+</div>
+
+</div>
+
+<div class="message">
+
+<div class="message-text">
+
+Как тебе новый дизайн TeleGolub?
+
+</div>
+
+<div class="message-time">
+
+12:32
+
+</div>
+
+</div>
+
+<div class="message me">
+
+<div class="message-text">
+
+Получается намного лучше старой версии.
+
+</div>
+
+<div class="message-time">
+
+12:33 ✔✔
+
+</div>
+
+</div>
+
+<div class="message gift">
+
+<div class="gift-card">
+
+<div class="gift-emoji">
+
+🎁
+
+</div>
+
+<div class="gift-info">
+
+<h3>
+
+Подарок отправлен
+
+</h3>
+
+<p>
+
+Golden Box
+
+</p>
+
+</div>
+
+</div>
+
+<div class="message-time">
+
+12:34 ✔✔
+
+</div>
+
+</div>
+
+<div class="message">
+
+<img
+
+src="https://picsum.photos/420/260"
+
+class="chat-image"
+
+alt="Фото">
+
+<div class="message-time">
+
+12:35
+
+</div>
+
+</div>
+
+<div class="typing">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+</section>
+
+<footer class="composer">
+
+<button class="icon-btn">
+
+<i data-lucide="smile"></i>
+
+</button>
+
+<button class="icon-btn">
+
+<i data-lucide="paperclip"></i>
+
+</button>
+
+<input
+
+type="text"
+
+placeholder="Напишите сообщение...">
+
+<button class="icon-btn">
+
+<i data-lucide="mic"></i>
+
+</button>
+
+<button class="send-btn">
+
+<i data-lucide="send-horizontal"></i>
+
+</button>
+
+</footer>
+
+</main>
+
+</div>
 
 <script>
+
 lucide.createIcons();
+
 </script>
 
-<script
-src="js/app.js"></script>
+<script src="js/app.js"></script>
 
 </body>
-  </html>
+
+</html>
+
+    
