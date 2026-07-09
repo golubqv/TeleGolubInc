@@ -1,0 +1,341 @@
+/* ==========================================================
+   TABLETS
+========================================================== */
+
+@media (max-width:1200px){
+
+.sidebar{
+
+width:330px;
+
+}
+
+.message{
+
+max-width:78%;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:900px){
+
+.app{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.sidebar{
+
+position:fixed;
+
+left:-100%;
+
+top:0;
+
+width:340px;
+
+height:100vh;
+
+z-index:1000;
+
+transition:left .28s ease;
+
+box-shadow:15px 0 50px rgba(0,0,0,.45);
+
+}
+
+.sidebar.open{
+
+left:0;
+
+}
+
+.main{
+
+width:100%;
+
+}
+
+.header{
+
+padding:0 16px;
+
+height:72px;
+
+}
+
+.header-actions{
+
+gap:8px;
+
+}
+
+.header-actions button{
+
+width:40px;
+
+height:40px;
+
+}
+
+.messages{
+
+padding:16px;
+
+gap:10px;
+
+}
+
+.message{
+
+max-width:90%;
+
+font-size:14px;
+
+}
+
+.chat-image{
+
+max-width:260px;
+
+}
+
+.composer{
+
+padding:12px;
+
+height:74px;
+
+gap:8px;
+
+}
+
+.composer input{
+
+height:46px;
+
+font-size:14px;
+
+}
+
+.composer button{
+
+width:44px;
+
+height:44px;
+
+font-size:17px;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media (max-width:600px){
+
+.sidebar{
+
+width:100%;
+
+}
+
+.logo h1{
+
+font-size:22px;
+
+}
+
+.logo p{
+
+font-size:12px;
+
+}
+
+.logo-icon{
+
+width:48px;
+
+height:48px;
+
+font-size:20px;
+
+}
+
+.search{
+
+margin:10px;
+
+height:48px;
+
+}
+
+.search input{
+
+font-size:14px;
+
+}
+
+.chat{
+
+padding:12px;
+
+gap:12px;
+
+}
+
+.avatar{
+
+width:44px;
+
+height:44px;
+
+font-size:16px;
+
+}
+
+.chat-top h3{
+
+font-size:15px;
+
+}
+
+.chat-bottom p{
+
+font-size:13px;
+
+}
+
+.header-user h2{
+
+font-size:16px;
+
+}
+
+.header-user p{
+
+font-size:12px;
+
+}
+
+.header-user .avatar{
+
+width:44px;
+
+height:44px;
+
+}
+
+.message{
+
+padding:10px 14px;
+
+border-radius:16px;
+
+}
+
+.message-text{
+
+font-size:14px;
+
+}
+
+.message-time{
+
+font-size:10px;
+
+}
+
+.chat-image{
+
+max-width:220px;
+
+}
+
+.gift-card{
+
+padding:12px;
+
+gap:12px;
+
+}
+
+.gift-emoji{
+
+font-size:42px;
+
+}
+
+.gift-info h3{
+
+font-size:15px;
+
+}
+
+.gift-info p{
+
+font-size:13px;
+
+}
+
+.empty-chat{
+
+padding:20px;
+
+}
+
+.empty-chat i{
+
+font-size:64px;
+
+}
+
+.empty-chat h2{
+
+font-size:24px;
+
+}
+
+.empty-chat p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================================
+   LANDSCAPE
+========================================================== */
+
+@media (max-height:650px){
+
+.header{
+
+height:64px;
+
+}
+
+.composer{
+
+height:68px;
+
+}
+
+.messages{
+
+padding:12px;
+
+}
+
+  }
