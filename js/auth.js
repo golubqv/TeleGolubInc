@@ -58,7 +58,7 @@ async function usernameExists(username){
 ==========================================
 */
 
-window.register=async function(){
+window.register = async function(){
 
     const username=document
     .getElementById("registerUsername")
@@ -74,9 +74,55 @@ window.register=async function(){
     .getElementById("registerPassword")
     .value;
 
-    if(username.length<4){
+    if(displayName.length<2){
 
-        alert("Минимум 4 символа");
+        alert("Введите имя");
+
+        return;
+
+    }
+
+    if(password.length<6){
+
+        alert("Пароль минимум 6 символов");
+
+        return;
+
+    }
+
+    const usernameRegex=/^[a-zA-Z0-9_]{4,32}$/;
+
+    if(!usernameRegex.test(username)){
+
+        alert("Юзернейм может содержать только буквы, цифры и _");
+
+        return;
+
+    }
+
+    const reserved=[
+
+        "admin",
+        "telegram",
+        "support",
+        "system",
+        "owner",
+        "moderator",
+        "root",
+        "api",
+        "null",
+        "undefined",
+        "settings",
+        "profile",
+        "login",
+        "register",
+        "me"
+
+    ];
+
+    if(reserved.includes(username.toLowerCase())){
+
+        alert("Этот юзернейм недоступен");
 
         return;
 
@@ -84,7 +130,7 @@ window.register=async function(){
 
     if(await usernameExists(username)){
 
-        alert("Этот юзернейм уже занят");
+        alert("Юзернейм уже занят");
 
         return;
 
@@ -92,9 +138,7 @@ window.register=async function(){
 
     const email=usernameToEmail(username);
 
-    const result=
-
-    await createUserWithEmailAndPassword(
+    const result=await createUserWithEmailAndPassword(
 
         auth,
 
@@ -118,17 +162,19 @@ window.register=async function(){
 
             displayName:displayName,
 
-            bio:"",
-
             avatar:"",
 
-            online:true,
-
-            verified:false,
+            bio:"",
 
             premium:false,
 
+            verified:false,
+
             coins:0,
+
+            online:true,
+
+            lastSeen:serverTimestamp(),
 
             createdAt:serverTimestamp()
 
@@ -136,7 +182,7 @@ window.register=async function(){
 
     );
 
-    alert("Аккаунт создан!");
+    alert("Добро пожаловать в TeleGolub!");
 
 }
 
